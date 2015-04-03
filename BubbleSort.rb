@@ -26,26 +26,14 @@ end
 # Contents of array must be integers
 # Runs the method bubble_sort and formats the output nicely
 def run1(array)
-	result = "["
-	sorted_array = bubble_sort(array)
-	for i in 0..(sorted_array.length - 2)
-		result += "#{sorted_array[i]},"
-	end
-	result += "#{sorted_array[sorted_array.length - 1]}]"
 	puts "Your sorted array is as follows:"
-	puts result
+	puts bubble_sort(array).to_s
 end
 
 # Runs the method bubble_sort_by and formats the output nicely
 def run2(array, lambda)
-	result = "["
-	sorted_array = bubble_sort_by(array, lambda)
-	for i in 0..(sorted_array.length - 2)
-		result += "'#{sorted_array[i]}',"
-	end
-	result += "'#{sorted_array[sorted_array.length - 1]}']"
 	puts "Your sorted array is as follows:"
-	puts result
+	puts bubble_sort_by(array, lambda).to_s
 end
 
 # Run code
