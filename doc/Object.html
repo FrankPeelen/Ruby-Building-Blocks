@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Object - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">BasicObject
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-bubble_sort">#bubble_sort</a>
+    
+    <li ><a href="#method-i-bubble_sort_by">#bubble_sort_by</a>
+    
+    <li ><a href="#method-i-caesar_cipher_char">#caesar_cipher_char</a>
+    
+    <li ><a href="#method-i-caesar_cipher_string">#caesar_cipher_string</a>
+    
+    <li ><a href="#method-i-encrypt">#encrypt</a>
+    
+    <li ><a href="#method-i-is_positive_int">#is_positive_int</a>
+    
+    <li ><a href="#method-i-run">#run</a>
+    
+    <li ><a href="#method-i-run1">#run1</a>
+    
+    <li ><a href="#method-i-run2">#run2</a>
+    
+    <li ><a href="#method-i-stock_picker">#stock_picker</a>
+    
+    <li ><a href="#method-i-substrings">#substrings</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Object">
+  <h1 id="class-Object" class="class">
+    class Object
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-bubble_sort" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">bubble_sort</span><span
+            class="method-args">(array)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Contents of array must be integers Returns a sorted array according to
+Bubble Sort principles</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bubble_sort-source">
+            <pre><span class="ruby-comment"># File BubbleSort.rb, line 3</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bubble_sort</span>(<span class="ruby-identifier">array</span>)
+        (<span class="ruby-identifier">array</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">downto</span>(<span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">array</span>[<span class="ruby-identifier">j</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">array</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]
+                                <span class="ruby-identifier">array</span>[<span class="ruby-identifier">j</span>], <span class="ruby-identifier">array</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>] = <span class="ruby-identifier">array</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>], <span class="ruby-identifier">array</span>[<span class="ruby-identifier">j</span>]
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">array</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-bubble_sort_by" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">bubble_sort_by</span><span
+            class="method-args">(array, lambda)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Sorts array according to the sorting specified in the lambda</p>
+          
+          
+
+          
+          <div class="method-source-code" id="bubble_sort_by-source">
+            <pre><span class="ruby-comment"># File BubbleSort.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">bubble_sort_by</span>(<span class="ruby-identifier">array</span>, <span class="ruby-identifier">lambda</span>)
+        (<span class="ruby-identifier">array</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">downto</span>(<span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-value">1</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">lambda</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">array</span>[<span class="ruby-identifier">j</span>], <span class="ruby-identifier">array</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]) <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                                <span class="ruby-identifier">array</span>[<span class="ruby-identifier">j</span>], <span class="ruby-identifier">array</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>] = <span class="ruby-identifier">array</span>[<span class="ruby-identifier">j</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>], <span class="ruby-identifier">array</span>[<span class="ruby-identifier">j</span>]
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">array</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-caesar_cipher_char" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">caesar_cipher_char</span><span
+            class="method-args">(char, offset, type)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>char can be any character offset can be any integer If type == true, caesar
+ciphens char to the left If type == false, caesar ciphens char to the right</p>
+          
+          
+
+          
+          <div class="method-source-code" id="caesar_cipher_char-source">
+            <pre><span class="ruby-comment"># File Caesar Cipher Encryption.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">caesar_cipher_char</span>(<span class="ruby-identifier">char</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">type</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">position</span> = <span class="ruby-ivar">@alphabet</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">char</span>)
+                <span class="ruby-identifier">type</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@alphabet</span>[(<span class="ruby-identifier">position</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">offset</span>) <span class="ruby-operator">%</span> <span class="ruby-value">26</span>] <span class="ruby-operator">:</span> <span class="ruby-ivar">@alphabet</span>[(<span class="ruby-identifier">position</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">offset</span>) <span class="ruby-operator">%</span> <span class="ruby-value">26</span>]
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">position_upper</span> = <span class="ruby-ivar">@alphabet_upper</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">char</span>)
+                <span class="ruby-identifier">type</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@alphabet_upper</span>[(<span class="ruby-identifier">position_upper</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">offset</span>) <span class="ruby-operator">%</span> <span class="ruby-value">26</span>] <span class="ruby-operator">:</span> <span class="ruby-ivar">@alphabet_upper</span>[(<span class="ruby-identifier">position_upper</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">offset</span>) <span class="ruby-operator">%</span> <span class="ruby-value">26</span>]
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">char</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-caesar_cipher_string" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">caesar_cipher_string</span><span
+            class="method-args">(string, offset, type)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>string can be any string offset can be any integer If type == true, caesar
+ciphens string to the left If type == false, caesar ciphens string to the
+right</p>
+          
+          
+
+          
+          <div class="method-source-code" id="caesar_cipher_string-source">
+            <pre><span class="ruby-comment"># File Caesar Cipher Encryption.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">caesar_cipher_string</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">type</span>)
+        <span class="ruby-identifier">result</span> = <span class="ruby-string">&quot;&quot;</span>
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">string</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+                <span class="ruby-identifier">result</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">caesar_cipher_char</span>(<span class="ruby-identifier">string</span>[<span class="ruby-identifier">i</span>], <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">type</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-encrypt" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">encrypt</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Asks the user for a String to encrypt, a positive integer to use as
+encryption offset, and &#39;left&#39; or &#39;right&#39; to use as
+encryption type. The method will automatically output the encrypted string
+to the command line.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="encrypt-source">
+            <pre><span class="ruby-comment"># File Caesar Cipher Encryption.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">encrypt</span>
+        <span class="ruby-comment"># Ask the user for a string to encrypt</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Please enter a string to be encrypted.&quot;</span>
+        <span class="ruby-identifier">string</span> = <span class="ruby-identifier">gets</span>
+        <span class="ruby-comment"># Ask the user for a positive integer to use as encryption offset</span>
+        <span class="ruby-identifier">offset</span> = <span class="ruby-keyword">false</span>
+        <span class="ruby-keyword">until</span> <span class="ruby-identifier">offset</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Please enter a positive number for the encryption offset.&quot;</span>
+                <span class="ruby-identifier">offset_str</span> = <span class="ruby-identifier">gets</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_positive_int</span>(<span class="ruby-identifier">offset_str</span>)
+                        <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">offset_str</span>.<span class="ruby-identifier">to_i</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;You did not enter a positive number.&quot;</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-comment"># Ask the user for &#39;left&#39; or &#39;right&#39; to use as encryption type.</span>
+        <span class="ruby-keyword">until</span> <span class="ruby-keyword">false</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Please enter &#39;left&#39; or &#39;right&#39; to set the type of encryption.&quot;</span>
+                <span class="ruby-identifier">encryption_type</span> = <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">downcase</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">encryption_type</span>.<span class="ruby-identifier">chomp</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;left&quot;</span>
+                        <span class="ruby-identifier">type</span> = <span class="ruby-keyword">true</span>
+                        <span class="ruby-keyword">break</span>
+                <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">encryption_type</span>.<span class="ruby-identifier">chomp</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;right&quot;</span>
+                        <span class="ruby-keyword">break</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;You did not enter &#39;left&#39; or &#39;right&#39;. These are the only acceptable inputs.&quot;</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-comment"># Output the encrypted string to the oommand line.</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\nYour encrypted message is as follows:\n\n#{caesar_cipher_string(string, offset, type)}\nEncrypton style:\n\nCaesar Cipher\n#{encryption_type}#{offset}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-is_positive_int" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">is_positive_int</span><span
+            class="method-args">(string)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Return string == positive integer</p>
+          
+          
+
+          
+          <div class="method-source-code" id="is_positive_int-source">
+            <pre><span class="ruby-comment"># File Caesar Cipher Encryption.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">is_positive_int</span>(<span class="ruby-identifier">string</span>)
+        <span class="ruby-operator">!</span><span class="ruby-operator">!</span>(<span class="ruby-identifier">string</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^[0-9]+$/</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-run" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">run</span><span
+            class="method-args">(stocks)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Run the code for a given array of integers</p>
+          
+          
+
+          
+          <div class="method-source-code" id="run-source">
+            <pre><span class="ruby-comment"># File Stock_Picker.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span>(<span class="ruby-identifier">stocks</span>)
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;List of stock prices:&quot;</span>
+        <span class="ruby-identifier">i</span> = <span class="ruby-value">1</span>
+        <span class="ruby-identifier">stocks</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stock</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Day #{i}: #{stocks[i - 1]}$&quot;</span>
+                <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">hindsight</span> = <span class="ruby-identifier">stock_picker</span>(<span class="ruby-identifier">stocks</span>)
+        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;You would&#39;ve made a maximum profit of #{hindsight[0]}$,\nif only you had bought on Day #{hindsight[1]} and sold on Day #{hindsight[2]}...&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-run1" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">run1</span><span
+            class="method-args">(array)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Contents of array must be integers Runs the method <a
+href="Object.html#method-i-bubble_sort">#bubble_sort</a> and formats the
+output nicely</p>
+          
+          
+
+          
+          <div class="method-source-code" id="run1-source">
+            <pre><span class="ruby-comment"># File BubbleSort.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run1</span>(<span class="ruby-identifier">array</span>)
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Your sorted array is as follows:&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">bubble_sort</span>(<span class="ruby-identifier">array</span>).<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-run2" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">run2</span><span
+            class="method-args">(array, lambda)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Runs the method <a
+href="Object.html#method-i-bubble_sort_by">#bubble_sort_by</a> and formats
+the output nicely</p>
+          
+          
+
+          
+          <div class="method-source-code" id="run2-source">
+            <pre><span class="ruby-comment"># File BubbleSort.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">run2</span>(<span class="ruby-identifier">array</span>, <span class="ruby-identifier">lambda</span>)
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Your sorted array is as follows:&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-identifier">bubble_sort_by</span>(<span class="ruby-identifier">array</span>, <span class="ruby-identifier">lambda</span>).<span class="ruby-identifier">to_s</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-stock_picker" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">stock_picker</span><span
+            class="method-args">(stocks)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>stocks must be an array with integers only Returns an array with 3
+integers: [Max Profit, Buy on day, Sell on day] If no profit can be made,
+<a href="0">result</a> == 0</p>
+          
+          
+
+          
+          <div class="method-source-code" id="stock_picker-source">
+            <pre><span class="ruby-comment"># File Stock_Picker.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stock_picker</span>(<span class="ruby-identifier">stocks</span>)
+        <span class="ruby-comment"># Until the array stocks&#39; size is 2 or less it will call the stock_picker method recursively for stocks[1..last]</span>
+        <span class="ruby-identifier">max_profit_on_days</span> = <span class="ruby-identifier">stocks</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">stock_picker</span>(<span class="ruby-identifier">stocks</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">stocks</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)]) <span class="ruby-operator">:</span> [<span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>]
+        <span class="ruby-identifier">max_profit_on_days</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">max_profit_on_days</span>[<span class="ruby-value">2</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+        <span class="ruby-comment"># Calculate the best sell day and the max profit if bought on day 1</span>
+        <span class="ruby-identifier">buy_day</span> = <span class="ruby-value">0</span>
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">sell_day</span> <span class="ruby-keyword">in</span> <span class="ruby-value">1</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">stocks</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+                <span class="ruby-identifier">profit</span> = <span class="ruby-identifier">stocks</span>[<span class="ruby-identifier">sell_day</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">stocks</span>[<span class="ruby-identifier">buy_day</span>]
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">profit</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">max_profit_on_days</span>[<span class="ruby-value">0</span>]
+                        <span class="ruby-identifier">max_profit_on_days</span>[<span class="ruby-value">0</span>] = <span class="ruby-identifier">profit</span>
+                        <span class="ruby-identifier">max_profit_on_days</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">buy_day</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+                        <span class="ruby-identifier">max_profit_on_days</span>[<span class="ruby-value">2</span>] = <span class="ruby-identifier">sell_day</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-comment"># Return the result</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">max_profit_on_days</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-substrings" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">substrings</span><span
+            class="method-args">(string, dictionary)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>string can be any string dictionary must be an array of strings This method
+returns a hash containing where for each s = substring in dictionary and c
+= count of s in string: {:s =&gt; c}</p>
+          
+          
+
+          
+          <div class="method-source-code" id="substrings-source">
+            <pre><span class="ruby-comment"># File Substrings.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">substrings</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">dictionary</span>)
+        <span class="ruby-identifier">result</span> = {}
+        <span class="ruby-identifier">result</span>.<span class="ruby-identifier">default</span> = <span class="ruby-value">0</span>
+        <span class="ruby-identifier">dictionary</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">substring</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">string</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-node">/#{substring}/</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">word</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">result</span>[<span class="ruby-identifier">word</span>.<span class="ruby-identifier">to_sym</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
